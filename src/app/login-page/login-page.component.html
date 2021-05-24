@@ -1,0 +1,43 @@
+<body>
+  <div class="loginCard">
+    <mat-card class="card">
+      <mat-card-title><img src="https://pngimg.com/uploads/plane/plane_PNG101219.png" style="width: 200px;">
+      <br>Login to Your Account
+        
+      </mat-card-title>
+      <mat-card-content>
+        <div class="content" style="text-align: center; margin-top: 2rem">
+          <form [formGroup]='form'  (ngSubmit)="onSubmit()" [style.fontSize.px]="18">
+            <mat-form-field appearance="fill" class='full-width'>
+              <mat-label>Username</mat-label>
+              <input
+                matInput
+                placeholder="saurus"
+                formControlName ='username'
+              />
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class='full-width'>
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                type="password"
+                placeholder="password"
+                formControlName='password'
+                style="border-radius: 15px; border-width: 2px;"
+              />
+            </mat-form-field>
+            <div class="form-group">
+              <button mat-raised-button [disabled]="loading" class="full-width" color="primary">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  Login
+              </button>
+
+          </div>
+          </form>
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</body>

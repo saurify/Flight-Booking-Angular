@@ -1,0 +1,65 @@
+<mat-card class="console-container">
+  <div class="selection">
+    <div class="vertical-flex">
+      <div class="source">
+        <mat-form-field appearance="fill">
+          <mat-label>FROM</mat-label>
+          <mat-select [(ngModel)]="start" (selectionChange)="updateend()">
+            <mat-option value="ALL">ALL</mat-option>
+            <mat-option *ngFor="let code of codes" [value]="code">{{
+              code
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="destination">
+        <mat-form-field appearance="fill">
+          <mat-label>TO</mat-label>
+          <mat-select [disabled]="start == ''" [(ngModel)]="end">
+            <mat-option value="ALL">ALL</mat-option>
+            <mat-option *ngFor="let code of endcodes" [value]="code">{{
+              code
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <mat-radio-group [(ngModel)]="triptype" color="primary" class="vertical-flex">
+      <mat-radio-button value="1" [checked]="true">One way</mat-radio-button>
+      <mat-radio-button value="2" [checked]="triptype==2">Round trip</mat-radio-button>
+    </mat-radio-group>
+
+    <div class="vertical-flex">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Choose a start date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker1"
+          [min]="minDate"
+          [formControl]="serializedDate0"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker1">
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Choose a return date</mat-label>
+        <input
+          matInput
+          [disabled]="triptype==1"
+          [matDatepicker]="picker2"
+          [min]="minDate"
+          [formControl]="serializedDate1"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker2">
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="vertical-flex">
+    <button mat-flat-button color="primary" style="width: 8rem;" [disabled]="start=='' || end==''" (click)="search()">Search</button>
+  </div>
+</mat-card>

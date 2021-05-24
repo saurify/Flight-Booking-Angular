@@ -1,0 +1,18 @@
+mat-card{ 
+    width: 60vw;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.console-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.container{
+  background-color: rgb(218, 226, 226);
+  min-height: 100%;
+}

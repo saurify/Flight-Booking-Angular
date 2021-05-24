@@ -1,0 +1,65 @@
+<div class="container">
+  <p>
+    <mat-toolbar color="primary">
+      <span>Flight booking Demo Application</span>
+      <span class="space" style="width: 100%"></span>
+      <span> {{ username }}</span>
+    </mat-toolbar>
+  </p>
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Book Flights" backgroundColor="rgb(218, 226, 226);">
+      <div class="console-container">
+        <app-search-console
+          (searchData)="acceptData($event)"
+        ></app-search-console>
+      </div>
+
+      <div style="height: 10px"></div>
+      <mat-card
+        style="margin-bottom: 5px; text-align: center"
+        *ngFor="let flight of searchResult"
+      >
+        <div class="div" style="display: flex; justify-content: space-evenly; font-size: medium; align-items: center;">
+          <span style="flex-grow: 1;"
+            ><b>From:</b> {{ flight.from }}</span
+          >
+          <span style="flex-grow: 1;"
+            ><b>To:</b> {{ flight.to }}</span
+          >
+          <span style="flex-grow: 1;"
+            ><b>Timings:</b> {{ flight.time }}</span
+          >
+          <span style="flex-grow: 1;"
+            ><b>Seats:</b> {{ flight.seats }}</span
+          >
+          <div style="flex-grow: 2">
+            <button
+              mat-raised-button
+              color="secondry"
+              (click)="book(flight.from, flight.to, flight.seats, flight.time)"
+            >
+              BOOK
+            </button>
+          </div>
+        </div>
+        <mat-card-actions style="text-align: center"> </mat-card-actions>
+      </mat-card>
+      <div *ngIf="noresults" style="text-align: center">
+        <h1>No Flights for this combination of source and destination</h1>
+      </div>
+    </mat-tab>
+    <mat-tab label="My bokings">
+      <mat-card
+        style="margin-bottom: 5px; text-align: center"
+        *ngFor="let booking of bookings"
+      >
+        <div class="div" style="display: flex; justify-content: space-evenly; font-size: medium;">
+          <span><b>From:</b> {{ booking.path }}</span>
+          <span><b>Date:</b> {{ booking.date }}</span>
+          <span><b>time:</b> {{ booking.time }}</span>
+          <span><b>seats:</b> {{ booking.seats }}</span>
+        </div>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,17 @@
+.console-container{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.selection{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+
+.vertical-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

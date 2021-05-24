@@ -1,0 +1,86 @@
+[
+    {
+        "from":"DEL",
+        "to": "AOI",
+        "time": "17:00-20:30",
+        "seats":60
+    },
+    {
+        "from":"AOI",
+        "to": "DEL",
+        "time": "07:00-10:30",
+        "seats":60
+    },
+    {
+        "from":"LAS",
+        "to": "DAL",
+        "time": "07:00-10:00",
+        "seats":70
+    },
+    {
+        "from":"DAL",
+        "to": "LAS",
+        "time": "17:00-20:00",
+        "seats":70
+    },
+    {
+        "from":"SDU",
+        "to": "TXK",
+        "time": "02:00-05:30",
+        "seats":110
+    },
+    {
+        "from":"TXK",
+        "to": "SDU",
+        "time": "14:00-17:30",
+        "seats":110
+    },
+    {
+        "from":"DEL",
+        "to": "SVO",
+        "time": "05:00-07:30",
+        "seats":95
+    },
+    {
+        "from":"SVO",
+        "to": "DEL",
+        "time": "17:00-19:30",
+        "seats":95
+    },
+    {
+        "from":"YEK",
+        "to": "YXX",
+        "time": "01:00-01:35",
+        "seats":105
+    },
+    {
+        "from":"YXX",
+        "to": "YEK",
+        "time": "13:00-13:35",
+        "seats":105
+    },
+    {
+        "from":"LAX",
+        "to": "ICN",
+        "time": "21:00-01:35",
+        "seats":50
+    },
+    {
+        "from":"ICN",
+        "to": "LAX",
+        "time": "11:00-13:35",
+        "seats":50
+    },
+    {
+        "from":"DEL",
+        "to": "DAL",
+        "time": "05:00-07:30",
+        "seats":55
+    },
+    {
+        "from":"DAL",
+        "to": "DEL",
+        "time": "17:00-19:30",
+        "seats":55
+    }
+]

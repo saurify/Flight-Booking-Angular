@@ -1,0 +1,44 @@
+[
+    {
+        "user": "neko",
+        "password":"password123",
+        "flights": [
+            {"path":"DEL-AOI",
+            "date": "2021-05-21",
+            "time": "17:00-20:30",
+            "seats": 1},
+            {"path":"LAS-DAL",
+            "date":"2021-05-27",
+            "time": "07:00-10:00",
+            "seats":2},
+            {"path":"DEL-SVO",
+            "date":"2021-06-12",
+            "time": "05:00-07:30",
+            "seats":1}                
+        ]
+
+    },
+    {
+        "user": "jinxed",
+        "password":"password123",
+        "flights": [
+            {"path":"SDU-TXK",
+            "date":"2021-05-23",
+            "time": "02:00-05:30",
+            "seats":3},
+            {"path":"YEK-YXX",
+            "date":"2021-06-05",
+            "time": "01:00-01:35",
+            "seats":1},
+            {"path":"DEL-DAL",
+            "date":"2021-07-23",
+            "time": "05:00-07:30",
+            "seats":2},
+            {"path":"ICN-LAX",
+            "date":"2021-08-28",
+            "time": "11:00-13:35",
+            "seats":1}             
+        ]
+
+    }
+]

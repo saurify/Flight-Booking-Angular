@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Confirm Booking</h1>
+<div mat-dialog-content>
+  <p>No of seats(less than total seats available)</p>
+  <mat-form-field>
+    <mat-label>xx</mat-label>
+    <input type="number" matInput [(ngModel)]="data.seats">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.seats" [disabled]="(data.seats==0)||(data.totalseats<=data.seats)">Book</button>
+</div>
